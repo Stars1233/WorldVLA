@@ -15,8 +15,8 @@ from .item_processor import FlexARItemProcessor_Action
 class ItemProcessor(FlexARItemProcessor_Action):
     def __init__(
         self,
-        # tokenizer= "/mnt/nas_jianchong/cenjun.cj/hug_models/models--Alpha-VLLM--Lumina-mGPT-7B-768/snapshots/9624463a82ea5ce814af9b561dcd08a31082c3af",
-        tokenizer= "/mnt/nas_jianchong/cenjun.cj/hug_models/models--Alpha-VLLM--Lumina-mGPT-7B-768/snapshots/9624463a82ea5ce814af9b561dcd08a31082c3af",
+        # tokenizer= "worldvla/ckpts/chameleon/base_model",
+        tokenizer= "worldvla/ckpts/chameleon/base_model",
         conv_template=Conversation,
         target_size=512,
     ):

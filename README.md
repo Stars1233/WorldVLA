@@ -104,7 +104,10 @@ pip install -e .
 
 ## 🗝️ Training
 
-### Step 1: Libero Data Preparation
+### Step 1: Download the Chameleon weights
+Download the Chameleon [tokenizer](https://huggingface.co/Alibaba-DAMO-Academy/WorldVLA/tree/main/chameleon/tokenizer), [base-model](https://huggingface.co/Alibaba-DAMO-Academy/WorldVLA/tree/main/base_model) and [starting point](https://huggingface.co/Alibaba-DAMO-Academy/WorldVLA/tree/main/chameleon/starting_point) weights, put them under the `worldvla/ckpts/chameleon/tokenizer`, `worldvla/ckpts/chameleon/base_model`, and `worldvla/ckpts/starting_point`.
+
+### Step 2: Libero Data Preparation
 
 We evaluate four tasks of the LIBERO benchmark, including [spatial, obejct, goal, 10], and 2 image resolutions, including [256, 512]. Here we take LIEBRO goal and 256 resolution as an example.
 
@@ -197,11 +200,8 @@ python pretoken.py --task goal --resolution 256
 python concate_action_world_model_data.py --task goal --resolution 256
 ```
 
-### Step 2: Prepare data configs
+### Step 3: Prepare data configs
 Set the correct data path in the config files in `worldvla/configs/libero_256_all`, `worldvla/exps_512_all`.
-
-### Step 3: Download the Chameleon weights
-Download the Chameleon [tokenizer](https://huggingface.co/Alibaba-DAMO-Academy/WorldVLA/tree/main/chameleon/tokenizer) and [starting point](https://huggingface.co/Alibaba-DAMO-Academy/WorldVLA/tree/main/chameleon/starting_point) weights, put them under the `worldvla/ckpts/chameleon/tokenizer` and `worldvla/ckpts/starting_point`.
 
 ### Step 4: Start training
 Now you can start training with your training scripts:
